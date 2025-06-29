@@ -9,7 +9,9 @@ const componentMap: Record<string, React.LazyExoticComponent<React.ComponentType
   ButtonToggle: lazy(() => import('../pages/ButtonToggle')),
   ProgressBar: lazy(() => import('../pages/ProgressBar')),
   UserProfile: lazy(()=> import('../pages/UserProfile')),
-  PasswordStrength : lazy(()=> import('../pages/PasswordStrength'))
+  PasswordStrength : lazy(()=> import('../pages/PasswordStrength')),
+  ArrayZigZag : lazy(()=> import("../pages/ArrayZigZag"))
+
 };
 
 export default function AppRoutes() {
