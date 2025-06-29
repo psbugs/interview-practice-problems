@@ -6,4 +6,5 @@ export const questions = [
 export const navLinks = [
   { path: '/', label: 'Home' },
   { path: '/chips-input', label: 'Chips Input' },
+  { path: '/button-toggle', label: 'Button Toggle' },
 ];
