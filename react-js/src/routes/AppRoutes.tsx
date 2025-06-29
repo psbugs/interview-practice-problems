@@ -1,19 +1,27 @@
-// routes/AppRoutes.tsx
+// AppRoutes.tsx
 import { Route, Routes } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
 import MainLayout from '../layout/MainLayout';
-import ButtonToggle from '../pages/ButtonToggle';
+import { navLinks } from '../utils/common-constants';
 
-const ChipsInput = lazy(() => import('../pages/ChipsInput'));
+const componentMap: Record<string, React.LazyExoticComponent<React.ComponentType<any>>> = {
+  ChipsInput: lazy(() => import('../pages/ChipsInput')),
+  ButtonToggle: lazy(() => import('../pages/ButtonToggle')),
+  ProgressBar: lazy(() => import('../pages/ProgressBar')),
+  UserProfile: lazy(()=> import('../pages/UserProfile')),
+  PasswordStrength : lazy(()=> import('../pages/PasswordStrength'))
+};
 
 export default function AppRoutes() {
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <Routes>
         <Route path="/" element={<MainLayout />}>
+          {navLinks.map((link) => {
+            const Component = componentMap[link.componentKey];
+            return <Route key={link.path} path={link.path} element={<Component />} />;
+          })}
         </Route>
-        <Route path="chips-input" element={<ChipsInput />} />
-        <Route path="button-toggle" element={<ButtonToggle />} />
       </Routes>
     </Suspense>
   );
