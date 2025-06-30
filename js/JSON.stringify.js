@@ -22,6 +22,6 @@ JSON.stringify1 = function(arg){
             return `"${key}" : ${strVal}`
         }}).filter(Boolean)
     }
-console.log('seen',seen)
+console.log('seen',seen);
 }
-console.log(JSON.stringify1(obj))
+console.log(JSON.stringify1(obj));

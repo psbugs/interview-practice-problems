@@ -16,6 +16,6 @@ function createCounter(){
 }
 
 let counterObj = createCounter();
-console.log(counterObj.increment())
-console.log(counterObj.increment())
-console.log(counterObj.increment())
+console.log(counterObj.increment());
+console.log(counterObj.increment());
+console.log(counterObj.increment());
