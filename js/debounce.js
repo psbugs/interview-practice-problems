@@ -1,6 +1,6 @@
 function greet(){
     console.log('Hy there i am greetings....');
-}
+};
 
 function debounce(fn,delay){
     let timeout;
