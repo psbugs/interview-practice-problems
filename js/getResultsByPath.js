@@ -15,12 +15,12 @@ function flattenObj(obj, prefix = '', out = {}) {
   return out;
 }
 
-const path = "data.results.status";
+const path = "data.results.error";
 const obj = {
   data: {
     results: {
       status: "completed",
-      error: "",
+      error: "my error",
     }
   },
 };

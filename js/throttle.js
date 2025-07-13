@@ -1,15 +1,25 @@
+/**
+ * Creates a throttled function that only invokes the provided function
+ * at most once per every `delay` milliseconds
+ *
+ * @param {Function} func - The function to throttle
+ * @param {number} delay - The number of milliseconds to throttle invocations to
+ * @return {Function} Returns the new throttled function
+ */
+function throttle(func, delay) {
+  let lastCallTime = 0;
+  let lastResult;
 
+  return function (...args) {
+    const now = Date.now();
 
-function throttle(fn,delay){
-    let lastCall = 0;
-    return function (...args){
-        const now = Date.now();
-        if(now-lastCall >= delay){
-            lastCall = now;
-        }
-        fn.apply(this,args)
+    if (now - lastCallTime >= delay) {
+      lastCallTime = now;
+      lastResult = func.apply(this, args);
     }
+
+    return lastResult;
+  };
 }
 
-let throttledFunc = throttle(()=> console.log('Executing at 1000'),2000);
-console.log(throttledFunc());
+module.exports = throttle;

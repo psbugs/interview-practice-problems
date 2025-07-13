@@ -7,7 +7,7 @@ function removeConsecutiveDuplicates(str){
             result += str[i];
         };
     };
-    console.log(result);
+    return result
 };
 
 console.log('remove consecutive o/p',removeConsecutiveDuplicates(str));
