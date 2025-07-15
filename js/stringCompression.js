@@ -12,4 +12,6 @@ for(let [key,value] of Object.entries(obj)){
     s = s+key+value;
 };
 
-console.log('s',s);
+console.log('s',s); 
+// a4b4c1r1e1f2 
+// output

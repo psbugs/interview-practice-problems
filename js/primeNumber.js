@@ -21,10 +21,10 @@ function generatePrimeNos(limit){
             count++;
             result = i;
         }
-    }
+    };
    return result;
 };
 
 
 
-console.log('nth prime be ',generatePrimeNos(15));
+console.log('nth prime be ',generatePrimeNos(3));

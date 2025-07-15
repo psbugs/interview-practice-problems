@@ -2,7 +2,6 @@ var input = 'abcabcbb';
 
 function allUnique(str){
     let set = new Set();
-
     for (let char of str){
         if(set.has(char)) return false;
         set.add(char)

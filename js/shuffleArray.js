@@ -5,3 +5,4 @@ for(let i=0;i<length;i++){
     [array[i],array[j]] = [array[j],array[i]];
 }
 console.log(array);
+// random array elements will print

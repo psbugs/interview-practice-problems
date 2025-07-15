@@ -6,3 +6,5 @@ while(number > 0){
     number = Math.floor(number/10);
 }
 console.log(rev);
+
+// let a = ['abc', 'ab10c', 'a10bc', 'bcd'];
