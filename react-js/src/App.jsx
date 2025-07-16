@@ -1,6 +1,6 @@
 import { store } from './app/store';
 import AppRoutes from './routes/AppRoutes'
-import Provider from 'react-redux';
+import {Provider} from 'react-redux';
 const App = ()=> {
   return (
     <>
