@@ -1,0 +1,31 @@
+✅ 1️⃣ Reconciliation
+React doesn’t blindly re-render everything. When state or props change, it reconciles the new virtual DOM with the previous one.
+It intelligently figures out what changed and updates only those parts of the real DOM. This keeps performance sharp, even as apps grow.
+
+✅ 2️⃣ Diffing Algorithm
+React’s diffing is smart and optimized:
+It compares trees efficiently, avoiding full re-renders.
+Keys in lists help React match elements between renders.
+Subtrees without changes are skipped entirely.
+🧩 This is why structuring your components thoughtfully—and using keys well—really matters.
+
+✅ 3️⃣ Batching
+React batches multiple setState calls into a single render to avoid unnecessary work.
+⚡With React 18, this got even better:
+Automatic Batching now works across promises, timeouts, and native events.
+You can use startTransition() to mark updates as low priority.
+📈 This keeps your UI responsive — even under load.
+
+✅ 4️⃣ React Fiber — The Engine Behind It All
+Honestly, one of the most fascinating parts of React.
+Fiber is the internal architecture introduced in React 16 that changed rendering from a blocking, synchronous process into an incremental, interruptible one.
+By breaking rendering work into small units (fibers), React can:
+🔹 Pausing & resuming rendering work
+🔹 Prioritizing urgent UI updates
+🔹 Features like Concurrent Rendering, Suspense, and Selective Hydration
+🧵 By breaking rendering into tiny units called fibers, React can work without blocking the main thread — even during heavy UI updates.
+
+✅ Bonus: Virtual DOM vs. Real DOM
+The real DOM is what the browser actually renders. Changing it is expensive.
+The Virtual DOM is React’s in-memory representation. React uses it to figure out the minimal, most efficient set of changes before touching the real DOM.
+Result? Faster, smoother UIs with less layout thrashing

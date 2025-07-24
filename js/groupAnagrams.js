@@ -12,4 +12,4 @@ for(let i=0;i<items.length;i++){
 
 const values = Object.values(tempObj);
 
-console.log(values)
+console.log(values);

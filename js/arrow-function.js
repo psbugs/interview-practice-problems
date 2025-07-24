@@ -1,2 +1,2 @@
 const addTwoNumbers = (a,b) => a+b
-console.log(addTwoNumbers(10,20))
+console.log(addTwoNumbers(10,20));

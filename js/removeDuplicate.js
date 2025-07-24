@@ -9,7 +9,6 @@
 // }
 // console.log(removeDuplicates(['a','b','c','a']));
 
-
 function removeDuplicates(items){
   // sort the items
   items = items.sort((a,b)=> a-b);
@@ -29,4 +28,4 @@ items.length = i + 1;
 
 return items;
 };
-removeDuplicates(['a','b','c','d','e','a'])
+removeDuplicates(['a','b','c','d','e','a']);
