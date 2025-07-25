@@ -1,0 +1,54 @@
+
+db.orders.aggregate([{
+    $match: {quantity : {$ge : 15} },
+    $lookup :{
+        from :'',
+        foreign_field:'',
+        'local_field':'_id'
+        as:'customerDetails'
+    }
+}])
+
+
+db.orders.aggregate([
+  // 1. Filter out cancelled orders
+  { $match: { status: "delivered" } },
+
+  // 2. Flatten each item in the order
+  { $unwind: "$items" },
+
+  // 3. Add a computed field for item total
+  {
+    $addFields: {
+      itemTotal: { $multiply: ["$items.quantity", "$items.price"] }
+    }
+  },
+
+  // 4. Group by user to calculate totals
+  {
+    $group: {
+      _id: "$userId",
+      totalAmount: { $sum: "$itemTotal" },
+      totalQuantity: { $sum: "$items.quantity" },
+      orders: { $addToSet: "$_id" }
+    }
+  },
+
+  // 5. Add number of orders
+  {
+    $addFields: {
+      orderCount: { $size: "$orders" }
+    }
+  },
+
+  // 6. Project final shape
+  {
+    $project: {
+      _id: 0,
+      userId: "$_id",
+      totalAmount: 1,
+      totalQuantity: 1,
+      orderCount: 1
+    }
+  }
+])

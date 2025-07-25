@@ -1,0 +1,139 @@
+To allow **multiple comments for a single post** in **MongoDB**, you can design the schema using either:
+---
+### ✅ 1. **Embedded (Nested) Comments inside Post**
+
+Best for: **Small number of comments** (e.g., blog with limited interaction)
+
+```js
+// Post schema (embedded comments)
+
+const mongoose = require('mongoose');
+
+const commentSchema = new mongoose.Schema({
+  user: { type: String, required: true },
+  text: { type: String, required: true },
+  createdAt: { type: Date, default: Date.now }
+});
+
+const postSchema = new mongoose.Schema({
+  title: String,
+  content: String,
+  comments: [commentSchema] // embedded array
+});
+
+const Post = mongoose.model('Post', postSchema);
+```
+
+### 📌 Sample Document:
+
+```json
+{
+  "_id": "postId123",
+  "title": "Node.js Tips",
+  "content": "Use streams wisely",
+  "comments": [
+    {
+      "user": "John",
+      "text": "Thanks! Super helpful.",
+      "createdAt": "2025-07-24T16:00:00Z"
+    },
+    {
+      "user": "Jane",
+      "text": "What about memory leaks?",
+      "createdAt": "2025-07-24T16:01:00Z"
+    }
+  ]
+}
+```
+
+---
+
+### ✅ 2. **Referenced Comments in a Separate Collection**
+
+Best for: **Large number of comments**, better **scalability**
+
+#### 🔹 `Post.js`
+
+```js
+const postSchema = new mongoose.Schema({
+  title: String,
+  content: String
+});
+
+const Post = mongoose.model('Post', postSchema);
+```
+
+#### 🔹 `Comment.js`
+
+```js
+const commentSchema = new mongoose.Schema({
+  postId: { type: mongoose.Schema.Types.ObjectId, ref: 'Post', required: true },
+  user: { type: String, required: true },
+  text: { type: String, required: true },
+  createdAt: { type: Date, default: Date.now }
+});
+
+const Comment = mongoose.model('Comment', commentSchema);
+```
+
+---
+
+### 🧪 Posting a Comment (Controller Example):
+
+```js
+// POST /comments
+async function postComment(req, res) {
+  const { postId, user, text } = req.body;
+
+  const comment = new Comment({ postId, user, text });
+  await comment.save();
+
+  res.json({ message: "Comment added!", comment });
+}
+```
+
+---
+
+### 🔍 Fetching Post + Comments
+
+```js
+// GET /posts/:id/comments
+const comments = await Comment.find({ postId: req.params.id }).sort({ createdAt: -1 });
+```
+
+OR use MongoDB's **aggregation**:
+
+```js
+Post.aggregate([
+  {
+    $match: { _id: new mongoose.Types.ObjectId(postId) }
+  },
+  {
+    $lookup: {
+      from: 'comments',
+      localField: '_id',
+      foreignField: 'postId',
+      as: 'comments'
+    }
+  }
+])
+```
+
+---
+
+## 📌 Summary of Design Decision:
+
+| Approach   | When to Use                  | Pros               | Cons                            |
+| ---------- | ---------------------------- | ------------------ | ------------------------------- |
+| Embedded   | Few comments per post        | Fast read, simple  | Array size limit, slower writes |
+| Referenced | Large or growing comment set | Scalable, flexible | Requires multiple queries       |
+
+---
+
+Would you like:
+
+* 🌐 REST API endpoints to manage comments?
+* 🚀 React frontend integration for comment form and list?
+* 🧾 MongoDB aggregation to paginate comments?
+
+Let me know and I’ll provide it!

@@ -1,0 +1,13 @@
+import {persistReducer} from 'redux-persist';
+import storage from 'redux-persist/lib/storage';
+
+
+
+const rootReducer = {
+    reducer : {
+        users: usersReducer
+    }
+};
+
+
+const persistedReducer = persistedReducer({key:'root',storage},rootReducer);

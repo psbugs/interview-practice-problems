@@ -1,0 +1,14 @@
+extraReducer : builder => {
+    builder.
+            addCase(fetchUser.pending , state => {
+                state.status = 'pending';
+            }).
+            addCase(fetchUser.fulfiled ,(state,action) => {
+                state.status = 'success';
+                state.data = action.payload
+            }).
+            addCase(fetchUser.rejected,state=> {
+                state.status = 'failed';
+                state.error = action.error.message;
+            })
+};

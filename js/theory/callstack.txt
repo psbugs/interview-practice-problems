@@ -1,0 +1,140 @@
+Great! Let’s dive deep into the **order of execution in JavaScript’s Call Stack** and understand the **core components of the JavaScript Engine** (like V8, SpiderMonkey).
+
+---
+
+## 🧠 What is the **JavaScript Engine**?
+
+A **JavaScript engine** is a program (like **V8 in Chrome**, **SpiderMonkey in Firefox**) that:
+
+* Parses JS code
+* Compiles it
+* Executes it efficiently
+
+---
+
+## 🔧 Core Components of a JS Engine
+
+| Component             | Role                                                                 |
+| --------------------- | -------------------------------------------------------------------- |
+| **Memory Heap**       | Stores objects, functions — like RAM for JS                          |
+| **Call Stack**        | Keeps track of function calls in LIFO (Last-In-First-Out) order      |
+| **Execution Context** | The environment in which code runs (global or function scope)        |
+| **Event Queue**       | Stores async tasks (e.g. setTimeout, fetch) until the stack is clear |
+| **Web APIs**          | Browser-provided (not part of engine): timers, DOM, fetch etc.       |
+| **Microtask Queue**   | Stores promises and mutations (runs before task queue)               |
+
+---
+
+## 📊 Order of Execution — **Call Stack in Action**
+
+### 💡 Simple Sync Example:
+
+```js
+function greet() {
+  console.log('Hello');
+}
+function welcome() {
+  greet();
+  console.log('Welcome');
+}
+welcome();
+```
+
+### 📌 Call Stack Order:
+
+```
+1. global()
+2. welcome()
+3. greet()
+4. console.log('Hello')
+5. console.log('Welcome')
+```
+
+The **last called is the first executed**, and it's **popped** after execution.
+
+---
+
+## ⏱️ Now with Async:
+
+```js
+console.log("Start");
+
+setTimeout(() => {
+  console.log("Timer done");
+}, 0);
+
+Promise.resolve().then(() => console.log("Microtask"));
+
+console.log("End");
+```
+
+### ✅ Order of Output:
+
+```
+Start
+End
+Microtask
+Timer done
+```
+
+### 📌 Execution Breakdown:
+
+| Step                                                                  | Action |
+| --------------------------------------------------------------------- | ------ |
+| ✅ `Start` → goes to call stack, logs immediately                      |        |
+| ✅ `setTimeout` → sent to Web APIs, callback pushed to **event queue** |        |
+| ✅ `Promise.then()` → goes to **microtask queue**                      |        |
+| ✅ `End` → logs                                                        |        |
+| 🧠 Event loop: Stack is empty → runs **microtasks first**             |        |
+| 🧠 Then runs **macrotasks** (event queue — setTimeout)                |        |
+
+---
+
+## 🎯 Event Loop Priorities:
+
+```
+1. Call Stack (runs immediately)
+2. Microtask Queue (Promises, MutationObserver)
+3. Task Queue (setTimeout, setInterval, I/O)
+```
+
+---
+
+## 🧠 Key Concepts to Remember:
+
+| Term                  | Meaning                                                 |
+| --------------------- | ------------------------------------------------------- |
+| **Call Stack**        | Tracks where you are in code execution                  |
+| **Execution Context** | Created for every function call (has `this`, variables) |
+| **Heap**              | Long-term memory, objects & closures live here          |
+| **Web APIs**          | Browser provided (setTimeout, DOM, fetch etc.)          |
+| **Microtasks**        | Promise `.then`, async/await — run before macrotasks    |
+| **Event Loop**        | Handles task scheduling when stack is empty             |
+
+---
+
+## 🔁 Recap with Visual Order:
+
+```
+JS Code
+ ↓
+Call Stack
+ ↓
+Web APIs (setTimeout, fetch, DOM events)
+ ↓
+Callback queues (Microtask → Macrotask)
+ ↓
+Event Loop (picks from queue when stack is empty)
+ ↓
+Back to Call Stack
+```
+
+---
+
+Would you like:
+
+* 📊 Diagram of the full event loop?
+* 🔍 Real-world bug caused by event loop misunderstanding?
+* 🧪 Mini quiz or challenge to test this concept?
+
+Let me know!

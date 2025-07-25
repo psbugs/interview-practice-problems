@@ -1,0 +1,103 @@
+### ⚡️ Throttling in JavaScript — Explained with Code and Use Cases
+
+---
+
+## ✅ What is **Throttling**?
+
+**Throttling** limits the execution of a function to **once in a specified time interval**, no matter how many times it's triggered.
+
+Think of **scroll**, **resize**, or **mousemove** events: they can fire **hundreds of times per second**, but you want to run your handler only **once every X ms**.
+
+---
+
+## 📦 Real-World Analogy
+
+> Imagine you're allowed to submit a form only once every 5 seconds — even if you click the submit button 10 times quickly.
+
+That's **throttling**: **limit frequency**, but not completely block.
+
+---
+
+## 🧪 Basic Throttle Function
+
+```js
+function throttle(func, delay) {
+  let lastCall = 0;
+
+  return function (...args) {
+    const now = new Date().getTime();
+
+    if (now - lastCall >= delay) {
+      lastCall = now;
+      func.apply(this, args);
+    }
+  };
+}
+```
+
+---
+
+## 🧠 Example: Throttle Scroll Event
+
+```js
+function handleScroll() {
+  console.log('Scroll handler triggered at', new Date().toISOString());
+}
+
+const throttledScroll = throttle(handleScroll, 1000); // once per second
+
+window.addEventListener('scroll', throttledScroll);
+```
+
+✅ Even if you scroll non-stop, `handleScroll` runs only **once per second**.
+
+---
+
+## 📊 Use Cases of Throttling
+
+| Use Case           | Why Throttle?                   |
+| ------------------ | ------------------------------- |
+| Scroll handler     | Avoid DOM thrashing & repaints  |
+| Resize event       | Optimize layout recalculations  |
+| Button spam click  | Prevent excessive submissions   |
+| API calls on input | Avoid sending too many requests |
+
+---
+
+## 🆚 Throttle vs Debounce
+
+| Feature  | Throttle                      | Debounce                       |
+| -------- | ----------------------------- | ------------------------------ |
+| Behavior | Executes at regular intervals | Executes **after** inactivity  |
+| Use for  | Scroll, resize, mousemove     | Search box, autocomplete       |
+| Example  | 1/sec no matter what          | Wait 500ms after last keypress |
+
+---
+
+## ✅ Throttle with `lodash`
+
+```js
+import throttle from 'lodash.throttle';
+
+window.addEventListener('scroll', throttle(() => {
+  console.log("Throttled scroll");
+}, 1000));
+```
+
+---
+
+## ✅ Summary
+
+* Throttle = **rate limit** function execution.
+* Runs **once every X ms**, no matter how often it's triggered.
+* Great for **performance optimization** on high-frequency events.
+
+---
+
+Would you like:
+
+* ✅ A version with **leading/trailing edge options**?
+* 🔄 A **React hook** for throttling?
+* 📊 Compare with `debounce` in code?
+
+Let me know!
