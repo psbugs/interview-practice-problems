@@ -1,0 +1,33 @@
+* {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body {
+    font-size: 16px;
+}
+
+p:hover {
+    font-family: monospace;
+}
+
+/* grouped selectors */
+#first, #second {
+    color: red;
+}
+
+#second {
+    color:aqua
+}
+/* nested selector */
+#first>p {
+    color: green;
+}
+.purple {
+    color: purple;
+    font-family: monospace;
+}
+.highlight {
+    background-color: yellow;
+    font-family: sans-serif;
+    font-style: italic;
+}

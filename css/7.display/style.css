@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    position: relative;
+}
+.header-container {
+    display: flex;
+    justify-content: end;
+    background-color: aqua;
+    height: 60px;
+    padding-top: 20px;
+}
+
+p {
+    margin-right: 20px;
+    /* text-decoration: line-through; */
+    font-size: 18px;
+    text-decoration-color: black;
+}
+
+.footer-wrap {
+    position: absolute;
+    display: inline;
+}
+
+.footer-inner-container {
+    position: fixed;
+    bottom: 30px;
+    height: 70px;
+    width: 70px;
+    right: 20px;
+    border-radius: 55%;
+    background-color: aqua;
+}
+.img1 {
+    float: right;
+}

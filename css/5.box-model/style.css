@@ -1,0 +1,20 @@
+body {
+    margin: 0;
+    box-sizing:border-box
+}
+.main {
+    display: flex;
+    border-radius: 12px solid green;
+    border-radius: 12px;
+    padding: 12px;
+    /* height: 1000px; */
+    background-color: blue;
+}
+.container {
+    border: 3px solid red;
+    padding:40px;
+    margin: 20px;
+    width: 200px;
+    height: 200px;
+
+}

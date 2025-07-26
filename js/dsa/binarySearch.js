@@ -1,7 +1,6 @@
 let array = [1,2,3,4,5,6];
 // array needs to be sorted then only binary search will applicable
 let itemToSearch = 10; //return its index from an array  index=4
-
 function binarySearch(arr, target) {
     let left = 0;
     let right = arr.length - 1;
