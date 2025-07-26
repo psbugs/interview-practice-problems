@@ -1,19 +1,25 @@
-function once(fn){
-    let isCalled = false;
-    let result = null;
-    return function(...args){
-           if(!isCalled){
-               isCalled = true;
-               result = fn.apply(this,args)
-           }
-           return result;
-    };
-};
+function once(fn) {
+  let isCalled = false;
+  let result = null;
 
-function demo(){
-    console.log('hello i am hello')
-};
+  return function (...args) {
+    if (!isCalled) {
+      try {
+        result = fn.apply(this, args); 
+      } catch (err) {
+        isCalled = false;
+      }
+    }
+    return result;
+  };
+}
 
-let onceFuncRes = once(demo);
-onceFuncRes();
-onceFuncRes();
+// Example function
+function demo() {
+  console.log('hello I am hello');
+}
+
+const onceFuncRes = once(demo);
+
+onceFuncRes(); // logs: hello I am hello
+onceFuncRes(); // nothing logged
