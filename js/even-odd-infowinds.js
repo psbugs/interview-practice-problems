@@ -10,5 +10,4 @@ function computeOdd(array){
 let response = computeOdd(array);
 console.log('final function response',response);
 
-
 // I want to write how you can store your todo item using redux toolkit

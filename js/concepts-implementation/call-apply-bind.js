@@ -4,8 +4,8 @@ let student1 = {
 };
 
 let student2 = {
-    fName:'dheerendra',
-    lName:'mandloi'
+    fName:'niroj',
+    lName:'meshram'
 };
 
 let commonMethod = function(city,age){
