@@ -1,0 +1,53 @@
+.container {
+    width: 400px;
+    border-radius: 5px;
+    border: 1px solid #434343;
+    /* overflow: auto; */
+    display: none;
+}
+
+.block1 {
+    overflow: auto;
+}
+
+.image1 {
+    float: left;
+    margin-right: 10px;
+}
+
+.image2 {
+    float: right;
+    margin-left: 10px;
+}
+
+.bigbox {
+    height: 500px;
+    width: 500px;
+    background-color: #424242;
+    /* display: flex; */
+
+}
+
+.box {
+    height: 125px;
+    width: 125px;
+    overflow: auto;
+}
+
+.b1 {
+    background-color: red;
+    float: left;
+}
+
+.b2 {
+    background-color: blue;
+    float: left;
+}
+
+.b3 {
+    background-color: brown;
+}
+
+.b4 {
+    background-color: green;
+}
