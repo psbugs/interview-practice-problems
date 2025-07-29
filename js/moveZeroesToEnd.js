@@ -1,13 +1,19 @@
-const array = [0,1,2,5,0,6,0,9];
-let count=0;
-for(let i=0;i<array.length;i++){
-    if(array[i] !== 0){   
-        array[count] = array[i]; 
-        count++;
+function moveZeroesToEnd(nums) {
+    let { length } = nums;
+    let count = 0;
+    for (let i = 0; i < length; i++) {
+        if (nums[i] !== 0) {
+            nums[count] = nums[i];
+            count++;
+        }
     }
-};
+    for (let j = count; j < length; j++) {
+        nums[j] = 0
+    }
+    return nums
 
-for(let i=count;i<array.length;i++){
-    array[i] = 0;
 }
-console.log(array)
+
+const nums = [1, 2, 3, 4, 0, 76, 0, 1, 1, 1, 8, 7]
+let result = moveZeroesToEnd(nums)
+console.log('response', result)
