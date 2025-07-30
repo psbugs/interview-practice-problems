@@ -20,4 +20,4 @@ function quickSort(arr) {
     return [...quickSort(left), pivot, ...quickSort(right)]
 }
 
-console.log('quick sort', quickSort(arr))
+console.log('quick sort', quickSort(arr));
