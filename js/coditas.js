@@ -5,19 +5,18 @@
 // aa**a**** -> “”    
 // Question : Remove * along with previous non star alphabets from string and return the remaining string
 
-
 let inputString = 'asd**f*gh';
 
 let stack = [];
 
-for(let item of inputString){
-    if(item == '*'){
+for (let item of inputString) {
+    if (item == '*') {
         stack.pop();
-    }else {
+    } else {
         stack.push(item)
     }
 }
-console.log('stack',stack.join(''))
+console.log('stack', stack.join(''))
 
 
 
@@ -40,7 +39,7 @@ console.log('stack',stack.join(''))
 // function showDetails() {
 //     console.log(greet());
 //     function greet() {
-//         return "Hello, namaste"; 
+//         return "Hello, namaste";
 //     }
 //     var farewell = function () {
 //         return "Its time say goodbye";

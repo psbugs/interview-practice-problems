@@ -8,9 +8,11 @@ const componentMap: Record<string, React.LazyExoticComponent<React.ComponentType
   ChipsInput: lazy(() => import('../pages/ChipsInput')),
   ButtonToggle: lazy(() => import('../pages/ButtonToggle')),
   ProgressBar: lazy(() => import('../pages/ProgressBar')),
-  UserProfile: lazy(()=> import('../pages/UserProfile')),
-  PasswordStrength : lazy(()=> import('../pages/PasswordStrength')),
-  ArrayZigZag : lazy(()=> import("../pages/ArrayZigZag"))
+  UserProfile: lazy(() => import('../pages/UserProfile')),
+  PasswordStrength: lazy(() => import('../pages/PasswordStrength')),
+  ArrayZigZag: lazy(() => import("../pages/ArrayZigZag")),
+  ContactForm: lazy(() => import("../pages/ContactForm")),
+  FaqAccordian: lazy(() => import("../pages/FaqAccordian"))
 };
 
 export default function AppRoutes() {

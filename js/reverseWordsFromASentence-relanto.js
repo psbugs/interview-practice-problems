@@ -16,3 +16,27 @@ const input = "I love JavaScript";
 const response = reverseWordsFromString(input);
 
 console.log(response); // Output: JavaScript love I
+
+// Relanto l1 interview experience
+
+// concentrates on var let and const
+
+// asked me to write and explain detailed concept at system level design
+
+// at very basics system level they majorly focused
+
+// where does they used in a scope
+
+// how variable works in javascript
+
+// lifecycle method of variable
+
+// creation ,allocation , execution
+
+// given one challenge
+
+// I love Javascript
+// Javascript love is
+
+
+
