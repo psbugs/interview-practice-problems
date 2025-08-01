@@ -8,7 +8,7 @@ function mergeArrays(arr1, arr2) {
     // Insert/merge items from arr2
     arr2.forEach(item => {
         if (map.has(item.id)) {
-            map.set(item.id, { ...map.get(item.id), ...item });
+            map.set(itcem.id, { ...map.get(item.id), ...item });
         } else {
             map.set(item.id, { ...item });
         }

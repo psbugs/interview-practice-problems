@@ -1,15 +1,26 @@
-function deepClone(originalObj) {
+function deepClone(obj) {
+    if (typeof obj !== "object" || obj === null) {
+        return obj; // return primitives as-is
+    }
 
-    if(originalObj !== "object" || originalObj == null)  return originalObj
-    let outObj = {};
+    // Handle arrays
+    if (Array.isArray(obj)) {
+        return obj.map(item => deepClone(item));
+    }
 
-    for (let key in originalObj) {
-        outObj[key] = deepClone(originalObj[key]);
-    };
+    // Handle objects
+    const clonedObj = {};
+    for (let key in obj) {
+        if (obj.hasOwnProperty(key)) {
+            clonedObj[key] = deepClone(obj[key]);
+        }
+    }
+    return clonedObj;
+}
 
-    return outObj;
-};
-
-console.log(deepClone({ a: { b: { c: 3 } } }));
+// Debugging
+// console.log(deepClone({ a: { b: { c: 3 } } }));
+console.log(deepClone([{ a: { b: { c: 3 } } }, { x: 10, y: [1, 2, 3] }]));
 
 module.exports = deepClone;
+// Handles both array and object while cloning the obj
