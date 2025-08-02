@@ -1,0 +1,94 @@
+body {
+    background: black;
+    color: #ffffff
+}
+
+.main-netflex-wrap {
+    margin-top: 15px;
+    margin-left: 45px;
+}
+
+.icons-plans-sign-in {
+    display: flex;
+    justify-content: space-between;
+}
+
+header {
+    display: flex;
+    align-items: center;
+}
+
+header .icons-plans-sign-in img {
+    height: 50px;
+    width: 50px;
+    display: inline-flex;
+    flex-wrap: nowrap;
+}
+
+header span {
+    padding: 35px;
+    color: white;
+    font-weight: 900;
+}
+
+.plans-btn {
+    border-radius: 50px;
+    height: 40px;
+    width: 90px;
+    background: grey;
+    color: white;
+    border: 2px solid white;
+}
+
+.sign-in-btn {
+    background: black;
+    height: 40px;
+    padding-left: 35px;
+    padding-right: 35px;
+    border-radius: 31px;
+    color: white;
+    border: 2px solid white;
+}
+
+main {
+    display: flex;
+    gap: 6rem;
+}
+
+.common-section {
+    width: 271px;
+    padding: 35px;
+    border: 2px solid white;
+    border-radius: 30px;
+}
+
+.first-sec {
+    background: #e71c40;
+}
+
+.second-sec {
+    background: #9323a1;
+}
+
+.third-sec {
+    background: #0108e7;
+}
+
+.third-sec span {
+    margin-top: -32px;
+    background: red;
+    width: 69px;
+    padding: 10px;
+    float: right;
+    border: 2px solid blue;
+    border-radius: 30px;
+}
+
+.type {
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.check-text {
+    display: flex;
+}
