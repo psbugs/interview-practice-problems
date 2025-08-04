@@ -6,7 +6,6 @@ function capitalizeWords(str) {
         for (let item of splittedStrArr) {
 
             let firstCharOfItem = item[0];
-            console.log('firstCharOfItem', firstCharOfItem)
             let remainingChars = item.slice(1);
             let capitalizedWord = firstCharOfItem?.toUpperCase() + remainingChars.toLowerCase();
             splittedStrArr[count] = capitalizedWord

@@ -20,7 +20,7 @@ function deepClone(obj) {
 
 // Debugging
 // console.log(deepClone({ a: { b: { c: 3 } } }));
-console.log(deepClone([{ a: { b: { c: 3 } } }, { x: 10, y: [1, 2, 3] }]));
+// console.log(deepClone([{ a: { b: { c: 3 } } }, { x: 10, y: [1, 2, 3] }]));
 
 module.exports = deepClone;
 // Handles both array and object while cloning the obj
