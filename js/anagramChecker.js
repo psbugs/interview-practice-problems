@@ -8,4 +8,3 @@ function isAnagram(str1, str2) {
 
 //For the purpose of user debugging.
 isAnagram("listen", "silent");
-module.exports = isAnagram
