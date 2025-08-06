@@ -12,7 +12,9 @@ const componentMap: Record<string, React.LazyExoticComponent<React.ComponentType
   PasswordStrength: lazy(() => import('../pages/PasswordStrength')),
   ArrayZigZag: lazy(() => import("../pages/ArrayZigZag")),
   ContactForm: lazy(() => import("../pages/ContactForm")),
-  FaqAccordian: lazy(() => import("../pages/FaqAccordian"))
+  FaqAccordian: lazy(() => import("../pages/FaqAccordian")),
+  DebouncingExample: lazy(() => import("../pages/DebouncingExample")),
+  Accordian: lazy(() => import("../pages/Accordian"))
 };
 
 export default function AppRoutes() {

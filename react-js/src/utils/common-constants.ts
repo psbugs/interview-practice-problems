@@ -6,5 +6,7 @@ export const navLinks = [
   { path: '/password-strength', label: 'Password Strength', componentKey: 'PasswordStrength' },
   { path: '/array-zig-zag', label: 'Array Zig Zag', componentKey: 'ArrayZigZag' },
   { path: '/contact-from', label: 'Contact Form', componentKey: 'ContactForm' },
-  { path: "/faq-accordian", label: "Faq Accodian", componentKey: "FaqAccordian" }
+  { path: "/faq-accordian", label: "Faq Accodian", componentKey: "FaqAccordian" },
+  { path: '/debouncing-example', label: 'Debouncing Example', componentKey: "DebouncingExample" },
+  { path: "/accordian", label: 'Accordian', componentKey: 'Accordian' }
 ];
