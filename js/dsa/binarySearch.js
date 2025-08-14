@@ -1,6 +1,6 @@
-let array = [1,2,3,4,5,6];
+let array = [1, 2, 3, 4, 5, 6];
 // array needs to be sorted then only binary search will applicable
-let itemToSearch = 10; //return its index from an array  index=4
+let itemToSearch = 4; //return its index from an array  index=3
 function binarySearch(arr, target) {
     let left = 0;
     let right = arr.length - 1;
@@ -20,4 +20,4 @@ function binarySearch(arr, target) {
     return -1; // Not found
 }
 
-console.log('response from binary search be',binarySearch(array,itemToSearch));
+console.log('response from binary search be', binarySearch(array, itemToSearch));

@@ -11,7 +11,6 @@ function capitalizeWords(str) {
             splittedStrArr[count] = capitalizedWord
             count++;
         }
-        console.log(splittedStrArr.join(' '))
         return splittedStrArr.join(' ')
     }
 
