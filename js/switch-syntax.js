@@ -1,13 +1,13 @@
 let hobbie = '';
 
-switch(hobbie){
-    case 'swimming' : 
+switch (hobbie) {
+    case 'swimming':
         console.log('Matched hobby is swimming');
         break;
-    case 'dancing' :
+    case 'dancing':
         console.log('I like dancing');
         break;
-    default :
+    default:
         console.log('I neither like dancing and swimming');
 };
 

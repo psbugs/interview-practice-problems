@@ -1,5 +1,4 @@
 // Prototye implementation
-
 class Animal {
     constructor(name) {
         this.name = name;

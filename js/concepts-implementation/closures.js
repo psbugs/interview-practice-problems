@@ -68,8 +68,6 @@ auth.login(); // User logged in
 console.log(auth.checkAuth()); // true
 
 
-
-
 function Cart() {
   let carts = [];
   return {

@@ -3,8 +3,8 @@ let stars = '*****     ';
 let n = stars.length;
 
 
-function printStars(frequency){
-    return stars.slice(5-frequency,n-frequency);
+function printStars(frequency) {
+    return stars.slice(5 - frequency, n - frequency);
 };
 
 console.log(printStars(5));

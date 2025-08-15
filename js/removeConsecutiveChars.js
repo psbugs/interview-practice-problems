@@ -1,13 +1,13 @@
 let str = 'aaaaaaabbbbbbccccddddefabcxcddd'
 
-function removeConsecutiveDuplicates(str){
+function removeConsecutiveDuplicates(str) {
     let result = str[0];
-    for(let i=1;i<str.length;i++){
-        if(str[i] !== str[i-1]){
+    for (let i = 1; i < str.length; i++) {
+        if (str[i] !== str[i - 1]) {
             result += str[i];
         };
     };
     return result
 };
 
-console.log('remove consecutive o/p',removeConsecutiveDuplicates(str));
+console.log('remove consecutive o/p', removeConsecutiveDuplicates(str));

@@ -4,18 +4,18 @@ const users = [
   { id: 3, name: "Charlie", email: "charlie@example.com", active: true }
 ];
 
-const filteredActiveUsers = users.filter((user)=> user.active)
-console.log('filteredActiveUsers',filteredActiveUsers);
+const filteredActiveUsers = users.filter((user) => user.active)
+console.log('filteredActiveUsers', filteredActiveUsers);
 
-const mapped = filteredActiveUsers.map((user,uIndex)=>{
-  let {email} = user;
-  let [local,domain] = email.split('@');
-  let firstItem = local[0]+"*".repeat(local.length-1);
+const mapped = filteredActiveUsers.map((user, uIndex) => {
+  let { email } = user;
+  let [local, domain] = email.split('@');
+  let firstItem = local[0] + "*".repeat(local.length - 1);
   return {
-      ...user,
-      email : firstItem+domain,
-      
+    ...user,
+    email: firstItem + domain,
+
   }
 });
 
-console.log('mapped',mapped)
+console.log('mapped', mapped)
