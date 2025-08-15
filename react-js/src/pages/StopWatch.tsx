@@ -1,20 +1,21 @@
-import  { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 function Stopwatch() {
   const [seconds, setSeconds] = useState(0);
   const [isStart, setStart] = useState(false);
   const stopWatchRef = useRef(null);
+
   useEffect(() => {
     if (isStart) {
       stopWatchRef.current = setInterval(() => {
-        setSeconds(prev=> prev + 1);
+        setSeconds(prev => prev + 1);
       }, 1000);
     } else {
-        clearInterval(stopWatchRef.current)
-    } 
-    return () => clearInterval(stopWatchRef.current);  
-  },[isStart]);
-  
+      clearInterval(stopWatchRef.current)
+    }
+    return () => clearInterval(stopWatchRef.current);
+  }, [isStart]);
+
   const startHandler = () => {
     setStart(true);
   };

@@ -1,7 +1,3 @@
-// async-batch-fetch.js
-// Run: node async-batch-fetch.js
-
-// Simulate API call for a page
 async function fetchPage(page) {
     console.log(`Fetching page ${page}...`);
     return new Promise((resolve) => {

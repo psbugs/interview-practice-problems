@@ -11,7 +11,6 @@ db.orders.aggregate([{
 
 
 db.orders.aggregate([
-  // 1. Filter out cancelled orders
   { $match: { status: "delivered" } },
 
   // 2. Flatten each item in the order
@@ -51,4 +50,27 @@ db.orders.aggregate([
       orderCount: 1
     }
   }
-])
+]);
+
+customers 
+name , city , products 
+
+products
+cid, productName, productPrice
+
+
+customer table entries
+
+1 Praveen Indore [2,3]
+2 Niroj   Ujjain [1] 
+
+
+db.customer.aggregate([{
+  $match : {$products :{$size : ${ne : 0}}}
+}])
+Products table entries
+
+1 2 Iphone 60000
+2 1 Mac    100000
+3 1 Fan    5000
+

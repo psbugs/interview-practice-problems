@@ -8,5 +8,7 @@ export const navLinks = [
   { path: '/contact-from', label: 'Contact Form', componentKey: 'ContactForm' },
   { path: "/faq-accordian", label: "Faq Accodian", componentKey: "FaqAccordian" },
   { path: '/debouncing-example', label: 'Debouncing Example', componentKey: "DebouncingExample" },
-  { path: "/accordian", label: 'Accordian', componentKey: 'Accordian' }
+  { path: "/accordian", label: 'Accordian', componentKey: 'Accordian' },
+  { path: "/product-listing", label: 'ProductsListing', componentKey: 'ProductsListing' },
+  { path: "/captcha-generator", label: 'CapchaGenerator', componentKey: 'CapchaGenerator' }
 ];

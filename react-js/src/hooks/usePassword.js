@@ -23,6 +23,7 @@ export default function usePassword(range, checkboxes) {
 
     if (!characterPool) return "";
 
+    // generate a password that matches above conditions
     let password = "";
     for (let i = 0; i < range; i++) {
         const randomIndex = Math.floor(Math.random() * characterPool.length);
@@ -30,4 +31,4 @@ export default function usePassword(range, checkboxes) {
     }
 
     return password;
-}
+};

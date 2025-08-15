@@ -14,7 +14,9 @@ const componentMap: Record<string, React.LazyExoticComponent<React.ComponentType
   ContactForm: lazy(() => import("../pages/ContactForm")),
   FaqAccordian: lazy(() => import("../pages/FaqAccordian")),
   DebouncingExample: lazy(() => import("../pages/DebouncingExample")),
-  Accordian: lazy(() => import("../pages/Accordian"))
+  Accordian: lazy(() => import("../pages/Accordian")),
+  CapchaGenerator: lazy(() => import("../pages/CapchaGenerator")),
+  ProductsListing: lazy(() => import("../pages/ProductsListing"))
 };
 
 export default function AppRoutes() {
