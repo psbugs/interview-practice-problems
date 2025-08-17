@@ -10,9 +10,9 @@
 // What is useState internal working
 // What is useRef hook , describe like a story
 // Useeffect hook does it executes before rendering or after and mess was created
-// Are you aware of typescript with next js -> they are highly looking for a candidate who is masters in typescript
+// Are you aware of typescript with next js -> they are highly looking for a candidate who is masters in typescript and nextjs
 // Does we can use hoisting in a react js component like i have declared a variable in a react js component
-// Difference between var and let
+// Difference between var and let under the hood how they work explain the picture the temporal dead zone 
 // Lifecycle methods of a react js component
 
 import { useState } from "react";

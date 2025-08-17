@@ -24,7 +24,6 @@ const ProgressBar = () => {
       <div className="bg-white rounded-2xl shadow-lg p-8 w-full max-w-md text-center space-y-6">
         <h1 className="text-2xl font-bold text-gray-700">Progress Bar Challenge</h1>
 
-        {/* Progress bar container */}
         <div className="relative w-full h-6 bg-gray-200 rounded-full overflow-hidden">
           <div
             className="absolute top-0 left-0 h-full bg-blue-500 transition-all duration-300 ease-in-out"

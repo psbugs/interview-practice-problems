@@ -13,9 +13,24 @@ workingWithStreamsAndBuffers();
 globalObjects();
 
 eventEmitter();
-
+console.log("__dirname", __dirname)
 app.get("/", (req, res) => {
-    return res.send('Hy i am response')
+    return res.sendFile(__dirname + "/public/index.html")
+});
+
+let data = 'Your post is available.'
+app.get('/get-data', (req, res) => {
+    // assume that you will take your data from db server
+    res.send({
+        data
+    })
+});
+
+app.get('/update-data', (req, res) => {
+    data = "You post gets deleted";
+    res.send({
+        data
+    });
 });
 
 app.listen(3001, () => {

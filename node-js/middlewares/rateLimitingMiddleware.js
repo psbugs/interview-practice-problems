@@ -19,7 +19,7 @@
 // };
 
 const rateLimitMap = new Map();
-const LIMIT = 5;
+const LIMIT = 100;
 const WINDOW_TIME = 1 * 60 * 1000;
 
 function rateLimitingMiddleware(req, res, next) {

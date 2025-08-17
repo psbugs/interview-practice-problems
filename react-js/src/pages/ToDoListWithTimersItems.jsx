@@ -4,7 +4,7 @@ import "./styles.css";
 function TodoWithTimeout() {
   const [value, setValue] = useState("");
   const [items, setItems] = useState([]);
-  const timersRef = useRef({}); // store interval IDs for each item
+  const timersRef = useRef({});
 
   const onInputHandleChange = (e) => {
     setValue(e.target.value);

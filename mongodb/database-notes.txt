@@ -1,0 +1,126 @@
+Famous scientist introduced : 
+
+EF code's 12 rules 
+
+If your database follows above 12 rules then it is a relational database management system.
+
+RDBMS : Relational Database management system
+
+During 1980's majorly data used to store on MYSQL and Postgresql.
+
+Story of mysql 
+
+mysql developed by michael widenius computer engineer 
+
+Its name is introduced with her daughters name :
+
+he has 3 daughters named as my-> eldest , max ->  , maria
+
+MYSQL , MAXDB , MARIADB
+
+MYSQL was acquired by SUN microsystems.
+
+NOSQL data base types:
+
+What does it means ?
+Not Only SQL , much more.
+Its introduced in 2000
+
+4 types majorly
+
+-Document database (Mongodb)
+-key value database ()
+-graph database
+-wide column database
+-multi model database (multi )
+
+
+It was started on 2007 but popular in 2009
+At the same time node js is also popular ,
+mongodb and node js go hand in hand , like they made for each other, there is a good bond with them
+
+it uses json same like json is being also handles by node js its amazing
+
+History of mongodb 
+
+developed by company named as 10gen
+mongodb came from humoungous which means huge and gigantic
+suppose to hold huge amount of data , 
+does not have fixed schema
+after they change their company name as mongodb Inc.
+
+Mongodb is flexible and developer friendly.
+It does not have have a rigid contract.
+Strong compatability with node js.
+Documents are mapped to JSON.
+Increases the developer productivity.
+Databases are also developed by various prog lang like c++. js, python etc
+
+They are simply the code running and do certain the manipulations and can do your stuffs.
+
+
+RDBMS VS NOSQL
+
+RDBMS 
+Data is stored on relations - rows and columns
+Just like an xl sheet.
+They can have related data using the concept of foreign key unique id.
+We need to perform joins
+
+Users
+id=unique
+id,fname,lname,phone,city
+1,praveen,sunhare,808, indore
+2,niraj,sunhare,9522,ujjain
+
+Hobby
+id=unique userid = foreign key which mapped from user table to hobby
+id,userid,Hobby
+1,1,Gardening
+2,1,Reading
+3,1,Writing
+4,2,Drinking alcohol
+
+ 
+javascript Object = json = document in mongodb 
+
+We have collection 
+for storing one row we need to create a document 
+
+keys = fields 
+value = data of specific type you want to store
+
+there is no need to normalize the data in NOSQL
+you dont need to performs joins in mongodb
+
+
+{
+    _id:'unique',
+    name:'praveen sunhare',
+    hobbies:['Gardening','Painting','Driving'],
+    city:'Indore'
+}
+JSON and js object is a best part for a web apps.
+
+RDBMS 
+
+Data is stored on table,rows and columns.
+Data is stored in a structure format
+There is a fixed schema
+MYSQL
+Tough horizonal scaling
+Relational joins we need to performs using keys and joins
+For read heavy applications, transactional workloads
+eg banking applications
+
+NOSQL
+Data is stored in collection , consisting of a json object
+they used unstructured format of data to store
+their schema design is highly flexible
+mongodb , neo4j cipher
+easy to maintain horizonal scaling
+nested relationship can be easily established
+real time , big data, distributed computing
+eg real time analytics, social media
+
+Read for uber schemaless architecture

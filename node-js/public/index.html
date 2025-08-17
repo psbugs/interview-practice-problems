@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Short Polling Real time example</title>
+</head>
+
+<script>
+    async function fetchData() {
+        let response = await fetch('get-data');
+        let responseDt = await response.json();
+        document.getElementById('short-poll-container').innerHTML = responseDt.data
+    }
+    let intervalId;
+    intervalId = setInterval(() => {
+        fetchData();
+    }, 1000)
+    // clearInterval(intervalId)
+</script>
+
+<body>
+    <h1>Short Polling Demo</h1>
+    <div id="short-poll-container"></div>
+</body>
+
+</html>
