@@ -13,7 +13,7 @@ workingWithStreamsAndBuffers();
 globalObjects();
 
 eventEmitter();
-console.log("__dirname", __dirname)
+
 app.get("/", (req, res) => {
     return res.sendFile(__dirname + "/public/index.html")
 });

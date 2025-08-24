@@ -16,7 +16,8 @@ const componentMap: Record<string, React.LazyExoticComponent<React.ComponentType
   DebouncingExample: lazy(() => import("../pages/DebouncingExample")),
   Accordian: lazy(() => import("../pages/Accordian")),
   CapchaGenerator: lazy(() => import("../pages/CapchaGenerator")),
-  ProductsListing: lazy(() => import("../pages/ProductsListing"))
+  ProductsListing: lazy(() => import("../pages/ProductsListing")),
+  AgeCalculator: lazy(() => import("../pages/AgeCalculator"))
 };
 
 export default function AppRoutes() {

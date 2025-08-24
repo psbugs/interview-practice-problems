@@ -4,10 +4,9 @@ const path = require('path');
 
 const app = express();
 
-// Configure storage
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, 'uploads/'); // Upload to 'uploads/' folder
+    cb(null, 'uploads/');
   },
   filename: function (req, file, cb) {
     const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1e9);
@@ -15,10 +14,8 @@ const storage = multer.diskStorage({
   }
 });
 
-// Multer instance
 const upload = multer({ storage: storage });
 
-// File upload route
 app.post('/upload', upload.single('myFile'), (req, res) => {
   res.json({
     message: 'File uploaded successfully!',
@@ -35,3 +32,24 @@ if (!fs.existsSync('./uploads')) {
 app.listen(3000, () => {
   console.log('Server started on port 3000');
 });
+
+
+
+
+
+
+
+// What is a websocket ?
+
+// It is a full duplex communication , meaning communication can take place from any direction
+
+
+
+// How do you cancel your api request if response is not successfully send
+// using abortcontroller
+
+
+
+
+
+

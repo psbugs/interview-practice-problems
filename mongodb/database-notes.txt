@@ -123,4 +123,4 @@ nested relationship can be easily established
 real time , big data, distributed computing
 eg real time analytics, social media
 
-Read for uber schemaless architecture
+-In your free time you must read for uber schemaless architecture

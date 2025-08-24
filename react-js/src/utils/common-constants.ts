@@ -10,5 +10,7 @@ export const navLinks = [
   { path: '/debouncing-example', label: 'Debouncing Example', componentKey: "DebouncingExample" },
   { path: "/accordian", label: 'Accordian', componentKey: 'Accordian' },
   { path: "/product-listing", label: 'ProductsListing', componentKey: 'ProductsListing' },
-  { path: "/captcha-generator", label: 'CapchaGenerator', componentKey: 'CapchaGenerator' }
+  { path: "/captcha-generator", label: 'CapchaGenerator', componentKey: 'CapchaGenerator' },
+  { path: "/age-calculator", label: 'AgeCalculator', componentKey: 'AgeCalculator' }
+
 ];
