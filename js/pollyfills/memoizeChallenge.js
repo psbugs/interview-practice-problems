@@ -23,7 +23,7 @@ let obj = {
 };
 
 function computeMemoized() {
-    const cache = new Map(); // closure-level persistent cache
+    const cache = new Map();
 
     return function (key) {
         if (cache.has(key)) {
@@ -33,7 +33,7 @@ function computeMemoized() {
 
         const value = obj[key];
         console.log('Fetched from original obj:', value);
-        cache.set(key, value); // store in cache
+        cache.set(key, value);
         return value;
     };
 }
