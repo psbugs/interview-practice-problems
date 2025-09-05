@@ -1,11 +1,11 @@
 import { store } from './app/store';
 import AppRoutes from './routes/AppRoutes'
-import {Provider} from 'react-redux';
-const App = ()=> {
+import { Provider } from 'react-redux';
+const App = () => {
   return (
     <>
-    <Provider store ={store}>
-      <AppRoutes/>
+      <Provider store={store}>
+        <AppRoutes />
       </Provider>
     </>
   )

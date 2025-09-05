@@ -12,6 +12,7 @@ app.use(rateLimitingMiddleware);
 workingWithStreamsAndBuffers();
 globalObjects();
 
+run
 eventEmitter();
 
 app.get("/", (req, res) => {
