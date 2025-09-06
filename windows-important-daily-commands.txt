@@ -1,0 +1,3 @@
+To remove a file or folder completely from your system, suppose i need to remove node_modules from my each project without deleting it manually from recycle bin
+
+del /f /q "C:/Users/hi/local-projects/backend/node_modules"
