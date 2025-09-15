@@ -1,0 +1,117 @@
+That’s a solid goal. Mastering the **core fundamentals of AngularJS** (the 1.x version) requires a project-based approach — small, focused apps that help you deeply understand concepts like controllers, services, directives, two-way data binding, routing, and dependency injection.
+
+Here’s a list of **progressive small learning applications** you can build, each designed to reinforce core AngularJS concepts:
+
+---
+
+### 🔰 **Beginner Level (Basics of AngularJS)**
+
+#### 1. **Todo List App**
+
+* **Concepts:** ng-model, ng-repeat, ng-click, data binding, simple controllers.
+* **Features:**
+
+  * Add, delete, and mark tasks as completed.
+  * Filter tasks (all, active, completed).
+
+#### 2. **Simple Calculator**
+
+* **Concepts:** Data binding, controller logic, expressions.
+* **Features:**
+
+  * Perform basic operations (add, subtract, multiply, divide).
+
+#### 3. **Live Character Counter**
+
+* **Concepts:** ng-model, real-time data binding.
+* **Features:**
+
+  * Text area input with a live character/word count below.
+
+---
+
+### 🧰 **Intermediate Level (Modularity, Services, Routing)**
+
+#### 4. **Contact Book / Address Book**
+
+* **Concepts:** Controllers, services, forms, ng-repeat, CRUD.
+* **Features:**
+
+  * Add, edit, delete contacts.
+  * Store data in a service or use localStorage.
+
+#### 5. **Weather App (using API)**
+
+* **Concepts:** `$http`, services, data binding, async handling.
+* **Features:**
+
+  * Enter a city name to fetch and display weather using an open API like OpenWeatherMap.
+
+#### 6. **User Authentication (Fake Login)**
+
+* **Concepts:** Routing, controllers, services, conditional rendering.
+* **Features:**
+
+  * Login page that checks static credentials.
+  * Redirects to dashboard on success.
+  * Logout functionality.
+
+#### 7. **Notes App**
+
+* **Concepts:** CRUD, filters, localStorage.
+* **Features:**
+
+  * Create, edit, delete notes.
+  * Persist them in browser storage.
+
+---
+
+### 🧠 **Advanced Level (Custom Directives, Filters, Routing, Dependency Injection)**
+
+#### 8. **Custom Modal/Popup Component**
+
+* **Concepts:** Custom directives, transclusion.
+* **Features:**
+
+  * Reusable modal with open/close behavior and content injection.
+
+#### 9. **Mini E-Commerce App**
+
+* **Concepts:** Routing, services, filters, directives, cart management.
+* **Features:**
+
+  * Product listing.
+  * Add to cart.
+  * Cart page with total amount.
+
+#### 10. **Blog Platform (Mock)**
+
+* **Concepts:** Routing, nested views, `$http`, templates.
+* **Features:**
+
+  * List of blog posts (fake API or static data).
+  * Post details page.
+  * New post form.
+
+---
+
+### ⚙️ **Bonus Tools to Use**
+
+* **Mock APIs:** Use [JSONPlaceholder](https://jsonplaceholder.typicode.com/) or create your own with [Mocky](https://mocky.io/).
+* **Local Storage:** For persistence without backend.
+* **Bootstrap or Materialize:** For UI styling, helps keep focus on AngularJS logic.
+
+---
+
+### 📚 Tips for Mastery
+
+* **Master `$scope` vs `controllerAs` syntax.**
+* **Practice creating and using `services` for data management.**
+* **Write your own `custom directives`.**
+* **Use `$http` and learn how to handle promises.**
+* **Implement `ngRoute` or `ui-router` for single-page apps.**
+* **Understand AngularJS’s digest cycle and two-way binding.**
+
+---
+
+Would you like me to scaffold a sample project (like a Todo app or Notes app) with AngularJS code to get you started quickly?

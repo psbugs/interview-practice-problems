@@ -44,3 +44,6 @@ const nums = [1, 2, [3, 3, 4, 5], 6[7, 8, 9]];
 
 // At last he want me to have advanced knowledge of Vue js , angular js and next js
 // I simply said that I am having a hands on experience in react js from frontend and nowadays I have upgraded myself in those areas
+
+
+// The detailed feedback was negative he want me to have knowledge of Typescript as well as Vue Js 
